@@ -19,8 +19,8 @@ Voici comment il se décompose.
 3. La Forge
    
     C'est la page où le joueur peut organiser la production d'objets. On peut y trouver :
-        - La gestion de la production en elle même : menu déroulant où l'on peut voir les objets qu'on a débloqué, avec --> prix de vente, matériaux requis, tps de fabriation pour 1 forgeron, nb de forgeron assigné.
-        - La partie "Embauche", où l'on peut voir le nb de forgeron que l'on emploie, la somme des salaires, et la possibilité d'embaucher (avec un coût initial qui augmente à chaque embauche) ou licencier un forgeron.
+            - La gestion de la production en elle même : menu déroulant où l'on peut voir les objets qu'on a débloqué, avec --> prix de vente, matériaux requis, tps de fabriation pour 1 forgeron, nb de forgeron assigné.
+            - La partie "Embauche", où l'on peut voir le nb de forgeron que l'on emploie, la somme des salaires, et la possibilité d'embaucher (avec un coût initial qui augmente à chaque embauche) ou licencier un forgeron.
 
 4. Le Magasin
    
