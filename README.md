@@ -46,15 +46,13 @@ C’est la page où l’on peut gérer notre façade de magasin.
 On peut y trouver :
 
 - La partie "Catalogue", où l'on peut voir le prix de vente ainsi que la probabilité de vente de chaque objet (inversement proportionnelle au prix).
-- La partie "Magasin", où l'on peut embaucher des vendeurs et acheter des étagères
+- La partie "Magasin", où l'on peut embaucher des vendeurs (idem que pour les forgerons) et acheter des étagères
 
 **Détails :**
 
 - Un client regarde chaque objet individuellement, il est donc dans l’intérêt du joueur d’avoir une production diversifiée pour maximiser les profits.
-- **Améliorations** :
-  - Embaucher un vendeur : augmente la probabilité de vente de tous les objets (proportionnellement à leur probabilité de base).  
-    ⚠️ Nombre limité de vendeurs (même principe que pour les forgerons).
-  - Acheter de nouvelles étagères pour attirer plus de clients par jour.
+- L'embauche d'un vendeur augmente la probabilité de vente de tous les objets (proportionnellement à leur probabilité de base). **ATENTION** Nombre limité de vendeurs, contrairement au forgerons
+- Acheter de nouvelles étagères attirerera plus de clients par jour.
 
 ---
 
