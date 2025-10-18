@@ -8,19 +8,19 @@ De plus, vous trouverez ci-dessous un descriptif du jeu et de ses méchaniques
 Le jeu possède une interface simple, comme un site web avec une en-tête globale, et plusieurs pages entre lesquelles on peut naviguer.
 Voici comment il se décompose.
 
-1.L'en-tête
+1. L'en-tête
   Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver :
     - Le nom d jeu : Blacksmith Master
     - Le solde du joueur
     - Le temps (jour de la semaine + heure) : le temps avance de +1H à un pas fixe de temps réel, et le salaire des employé est versé tout les jours à minuit
     - Le nom des différentes pages sur lesquelles on peut cliquer pour s'y diriger (le nom de la page actuelle est légerement grisé)
 
-2.La Forge
+2. La Forge
   C'est la page où le joueur peut organiser la production d'objets. On peut y trouver :
     - La gestion de la production en elle même : menu déroulant où l'on peut voir les objets qu'on a débloqué, avec --> prix de vente, matériaux requis, tps de fabriation pour 1 forgeron, nb de forgeron assigné.
     - La partie "Embauche", où l'on peut voir le nb de forgeron que l'on emploie, la somme des salaires, et la possibilité d'embaucher (avec un coût initial qui augmente à chaque embauche) ou licencier un forgeron.
 
-3.Le Magasin
+3. Le Magasin
   C'est la page pù l'on peut gérer notre facade de magasin. On peut embaucher des venteur et acheter de nouvelles étagère pour booster les ventes, voir la probabilité d'achat et la quantité de chaque objet etc. On peut y voir
     - Le catalogue des objets en vente, avec prix, quantité et probabilité de vente (inversemment proportionnel au prix de l'objet). A noter q'un client regarder chaque objet individuellement. Il est donc dans l'interet du
         joueur que d'avoir une production diversifié pour maximiser les profits
