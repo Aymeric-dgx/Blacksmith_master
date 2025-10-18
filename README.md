@@ -21,7 +21,7 @@ Voici comment il se décompose.
     - La partie "Embauche", où l'on peut voir le nb de forgeron que l'on emploie, la somme des salaires, et la possibilité d'embaucher (avec un coût initial qui augmente à chaque embauche) ou licencier un forgeron.
 
 3. Le Magasin
-  C'est la page pù l'on peut gérer notre facade de magasin. On peut embaucher des venteur et acheter de nouvelles étagère pour booster les ventes, voir la probabilité d'achat et la quantité de chaque objet etc. On peut y voir
+  C'est la page pù l'on peut gérer notre facade de magasin. On peut embaucher des venteur et acheter de nouvelles étagère pour booster les ventes, voir la probabilité d'achat et la quantité de chaque objet etc. On peut y       voir
     - Le catalogue des objets en vente, avec prix, quantité et probabilité de vente (inversemment proportionnel au prix de l'objet). A noter q'un client regarder chaque objet individuellement. Il est donc dans l'interet du
         joueur que d'avoir une production diversifié pour maximiser les profits
    - La partie "Améliorations", où l'on peut :
