@@ -6,6 +6,11 @@ De plus, vous trouverez ci-dessous un descriptif du jeu et de ses mécaniques.
 
 ---
 
+## Résumé du jeu
+
+Vous êtes un propriétaire d'une forge durant le Moyen-Age. Vous pouvez embaucher des forgerons, des vendeurs, des mineurs, débloquer de nouvelles technoligies (mines et objets) dans l'arbre, observer l'évoltuions des différents stockes...
+Il y'a également un système de temps propre au jeu. Vous pouvez voir dans un coin de l'écran quel jour de la semaine nous sommes ainsi que l'heure, et tout les jours à minuit vous devrez payer les salaires de vos employés.
+
 ## Structure du jeu
 
 Le jeu possède une interface simple, comme un site web avec une en-tête globale, et plusieurs pages entre lesquelles on peut naviguer.  
