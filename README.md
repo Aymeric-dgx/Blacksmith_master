@@ -9,11 +9,11 @@ Le jeu possède une interface simple, comme un site web avec une en-tête global
 Voici comment il se décompose.
 
 1. L'en-tête
-  Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver :
-    - Le nom d jeu : Blacksmith Master
-    - Le solde du joueur
-    - Le temps (jour de la semaine + heure) : le temps avance de +1H à un pas fixe de temps réel, et le salaire des employé est versé tout les jours à minuit
-    - Le nom des différentes pages sur lesquelles on peut cliquer pour s'y diriger (le nom de la page actuelle est légerement grisé)
+    Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver :
+      - Le nom d jeu : Blacksmith Master
+      - Le solde du joueur
+      - Le temps (jour de la semaine + heure) : le temps avance de +1H à un pas fixe de temps réel, et le salaire des employé est versé tout les jours à minuit
+      - Le nom des différentes pages sur lesquelles on peut cliquer pour s'y diriger (le nom de la page actuelle est légerement grisé)
 
 2. La Forge
   C'est la page où le joueur peut organiser la production d'objets. On peut y trouver :
