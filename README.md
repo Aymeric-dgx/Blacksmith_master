@@ -9,7 +9,6 @@ Le jeu possède une interface simple, comme un site web avec une en-tête global
 Voici comment il se décompose.
 
 1. L'en-tête.
-
     Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver :
       - Le nom d jeu : Blacksmith Master
       - Le solde du joueur
