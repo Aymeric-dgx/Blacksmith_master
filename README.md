@@ -10,8 +10,7 @@ Voici comment il se décompose.
 
 1. L'en-tête
 
-    Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver :
-   
+    Il est générale à tout le jeu, peu importe où se trouve le joueur, il sera toujours affiché. On peut y trouver : 
       - Le nom d jeu : Blacksmith Master
       - Le solde du joueur
       - Le temps (jour de la semaine + heure) : le temps avance de +1H à un pas fixe de temps réel, et le salaire des employé est versé tout les jours à minuit
@@ -19,8 +18,7 @@ Voici comment il se décompose.
 
 3. La Forge
    
-      C'est la page où le joueur peut organiser la production d'objets. On peut y trouver :
-   
+        C'est la page où le joueur peut organiser la production d'objets. On peut y trouver :
             - La gestion de la production en elle même : menu déroulant où l'on peut voir les objets qu'on a débloqué, avec --> prix de vente, matériaux requis, tps de fabriation pour 1 forgeron, nb de forgeron assigné.
             - La partie "Embauche", où l'on peut voir le nb de forgeron que l'on emploie, la somme des salaires, et la possibilité d'embaucher (avec un coût initial qui augmente à chaque embauche) ou licencier un forgeron.
 
