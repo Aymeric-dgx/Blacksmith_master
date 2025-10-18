@@ -71,11 +71,11 @@ Permet, en échange de l’embauche et de la paie de mineurs, d’obtenir des ma
 
 ### 5. Les Stocks
 
-Menu déroulant où l’on peut voir un graphique au cours du temps de :
+Menu déroulant où l’on peut voir un graphique des quantité au cours du temps de :
 
 - L’or du joueur et des matières premières (fer, argent, or)  
   + boutons pour acheter des matières premières (prix unitaire affiché)
-- Le stock de tous les objets
+- Puis dans une deuxieme section en dessous, le stock de tous les objets
 
 ---
 
