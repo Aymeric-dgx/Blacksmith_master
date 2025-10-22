@@ -1,7 +1,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <stdio.h>
-#include <header.h> // plutôt "header.h" ?
+#include "header.h"
 
 int main(int argc, char* argv[]) {
 
@@ -42,6 +42,8 @@ int main(int argc, char* argv[]) {
 
     // Boucle d’affichage
     SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, message, NULL, &messageRect);
+    messageRect.y += 200;
     SDL_RenderCopy(renderer, message, NULL, &messageRect);
     SDL_RenderPresent(renderer);
     SDL_Delay(3000);
