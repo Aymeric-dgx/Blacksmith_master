@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // Charger une police (tu dois avoir un fichier .ttf dans ton projet)
-    TTF_Font* font = TTF_OpenFont("src/font/MedulaOne-Regular.ttf", 48);
+    TTF_Font* font = TTF_OpenFont("src/font/MedulaOne-Regular.ttf", 300); //Mettre la size à au moins 300 pour avoir une police clair, non pixelisé
     if (!font) {
         printf("Erreur chargement police : %s\n", TTF_GetError());
         return 1;
