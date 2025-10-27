@@ -72,8 +72,5 @@ int main(int argc, char* argv[]) {
         SDL_RenderFillRect(renderer, &second_rect);
 
         SDL_RenderPresent(renderer);
-
-        // Attendre 500 ms
-        SDL_Delay(500);
     }
 }
