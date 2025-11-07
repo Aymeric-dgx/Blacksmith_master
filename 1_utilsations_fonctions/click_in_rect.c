@@ -46,9 +46,9 @@ void print_rect(SDL_Renderer* renderer, SDL_Rect rect, SDL_Color color, int fill
 }
 
 
-//int click_in_rect(SDL_Event* event, SDL_Rect rect) --> renvoie 1 ou 0 si click ou non dans le rectangle
+//Renvoie 1 si le click est dans le rectangle, 0 sinon
 int click_in_rect(SDL_Event event, SDL_Rect rect) {
-    if(event.type == SDL_MOUSEBUTTONDOWN) {
+    if(event.type == SDL_MOUSEBUTTONDOWN && event.type == SDL_BUTTON_LEFT) {
         int mx, my;
         SDL_GetMouseState(&mx, &my);
         if(mx >= rect.x && mx <= rect.x+rect.w && my >= rect.y && rect.y <= rect.y+rect.h) {
