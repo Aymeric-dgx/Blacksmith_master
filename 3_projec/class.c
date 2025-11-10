@@ -1,0 +1,67 @@
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+#include <stdio.h>
+#include "0_header.h"
+
+
+typedef struct joueur {
+    int balance; // Solde
+    int total_salary;
+    int hour;
+    int day;
+} Player;
+
+
+typedef struct forgeron {
+    int salary;
+    int initial_hiring_cost;
+    int actual_hiring_cost;
+    int hiring_cost_gap;
+    int nb_employed;
+} Blacksmith;
+
+
+typedef struct vendeur {
+    int salary;
+    int initial_hiring_cost;
+    int actual_hiring_cost;
+    int hiring_cost_gap;
+    int nb_employed;
+} Seller;
+
+
+typedef struct mineur {
+    int salary;
+    int initial_hiring_cost;
+    int actual_hiring_cost;
+    int hiring_cost_gap;
+    int nb_employed;
+} Miner;
+
+
+typedef struct etagere {
+    int nb_purchased;
+    int initial_cost;
+    int actual_cost;
+    int cost_gap;
+    int nb_of_client_boost; // ex : +25 clients/jour par étagère
+} Shelves;
+
+
+typedef struct matiere_premiere {
+    int mine_unlocked;          // Avec l'arbre technologique
+    int nb_stocked;
+    int price;                  // Prix par unité de matière premiere
+    int time_of_production;     // Temps de production pour 1 unité de fer/argent/or dans la mine 
+    int nb_miner_on_it;         // nb de mineur assigné au minage de ce minerai (càd fer/argent/or) --> tps de prod. pour 1 minerai = time/nb_miner
+} Raw_material;
+
+
+typedef struct objet {
+    int unlocked; // Avec l'arbre de technologie
+    int price;
+    int nb_stocked;
+    int time_of_production;
+    int nb_blacksmith_on_it;
+    int chance_of_buying; // Va ressembler à quelque chose comme --> chance_of_buying = 1/price. Peut être ajouter un facteur multiplicateur ?
+} Item;
