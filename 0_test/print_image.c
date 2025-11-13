@@ -7,12 +7,6 @@
 int main(int argc, char* argv[]) {
     if(init_sdl_ttf()) return 1;
 
-    // On initialise le SDL_image.h pour qu'il supporte les .png et les .jpg
-    if (!(IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG))) {
-        printf("Erreur IMG_Init: %s\n", IMG_GetError());
-        return 1;
-    }
-
     // Récupération de la taille de l'écran
     SDL_DisplayMode screen;
     SDL_GetCurrentDisplayMode(0, &screen);
