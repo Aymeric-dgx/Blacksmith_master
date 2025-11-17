@@ -1,5 +1,3 @@
-// Vérifier qu'il est bien à jour
-
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_image.h>
@@ -38,6 +36,10 @@ Liste des fonctions définies dans ce fichier
     
     - void scrolling(SDL_Event event, SDL_Rect** rects_to_move)
         --> Déplace tous les rectangles présents dans la liste, afin de faire comme du scrolling
+
+    - void print_image(SDL_Renderer* renderer, SDL_Rect rect, char* image_file)
+        --> Imprime une image dans le rect (seulement des .png ou des .jpg, et faire attention à ce que ce soit bient détouré)
+        --> NB : on peut activer pour accepter d'autre format, mais nescessite modifs dans init_sdl_ttf() (+ importation de bibliotèques ?)
 */
 
 
@@ -81,16 +83,23 @@ int init_sdl_ttf() {
 
 // Déssiner un rectangle, avec 2 options : fill_it (le remplir) ou thickness (si on veut jsute des bords épais)
 void print_rect(SDL_Renderer* renderer, SDL_Rect rect, SDL_Color color, int fill_it, int thickness) {
+    // A chaque fois, on va repeindre en dessous en blanc (couleur par defaut), afin que la couleur que l'on observe au final ne soit
+    // pas une somme de la nouvelle couleur et de l'ancienne sur lauqelle on a peint (ex : si on peut du rouge sur du bleu, on verra du violet
+    // et pas du rouge)
+    SDL_SetRenderDrawColor(renderer, 255,255,255,255);
     // Si on veut remplir le rectangle
     if(fill_it==1 && thickness==0) {
+        SDL_RenderFillRect(renderer, &rect);
         SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
         SDL_RenderFillRect(renderer, &rect);
     }
     // Si on veut un rectangle avec des bords d'épaisseur thickness
     else if(fill_it==0 && thickness>0) {
-        SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
         // On draw thickness fois un rectangle un peu plus petit à chaque fois, pour simuler des bords épais
         for(int i=0 ; i<thickness ; i++) {
+            SDL_SetRenderDrawColor(renderer, 255,255,255,255);
+            SDL_RenderDrawRect(renderer, &rect);
+            SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
             SDL_RenderDrawRect(renderer, &rect);
             rect.x += 1; 
             rect.y += 1;
@@ -119,6 +128,9 @@ Pour que le texte soit bien dimensionné, il faut respecter un ratio = hauteur/l
 On créé un msg_rect dimensionné en fonction du nombre de caractères et de la font_size souhaité, et 
     qui est centré dans le rect
 */
+
+
+// TEST : Rechercher la fonction TTF_SizeText(...) ?
 void write_text(SDL_Renderer* renderer, SDL_Rect rect, char* message, TTF_Font* font, SDL_Color color, int font_size) {
     int nb_char = 0;
     while(message[nb_char] != '\0') nb_char++;
@@ -261,4 +273,36 @@ void scrolling(SDL_Event event, SDL_Rect** rects_to_move) {
             index_in_list++;
         }
     }
+}
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------------------------------------------------------------------------------------//
+//-------------------------------------------------------------------------------------------------------------------------------//
+
+
+
+
+
+
+// Immrime une image dans le rect
+void print_image(SDL_Renderer* renderer, SDL_Rect rect, char* image_file) {
+    SDL_Surface* tmp_surface = IMG_Load(image_file);
+    if(!tmp_surface) {
+        printf("Erreur IMG_Load dans print_image, avec %s --> %s\n", image_file, IMG_GetError());
+        return;
+    }
+    SDL_Texture* tmp_texture = SDL_CreateTextureFromSurface(renderer, tmp_surface);
+    if (!tmp_texture) {
+        printf("Erreur SDL_CreateTextureFromSurface dans print_image, avec %s --> %s\n", image_file, SDL_GetError());
+        return;
+    }
+    SDL_RenderCopy(renderer, tmp_texture, NULL, &rect);
+    SDL_FreeSurface(tmp_surface);
+    SDL_DestroyTexture(tmp_texture);
 }
