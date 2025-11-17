@@ -6,8 +6,8 @@
 
 // Création de la page "globale" (titre, solde, temps, onglets des pages, ...)
 
-// NB pour ajouter à chacune des 5 pages l'en-tête sans trop charger le code --> Décalrer tout les rects, les foutte dans une liste et les passer en parametre à une fonction stubborn(...) ?
-// Sinon tout foutre dans une fonction et la mettre dans le while, mais beaucoup d'intialisation de SDL_Rect "inutile" --> Recherhcer si cela conseomme beaucoup de ressource ou non ?
+// NB pour ajouter à chacune des 5 pages l'en-tête sans trop charger le code --> Déclarer tout les rects, les foutre dans une liste et les passer en parametre à une fonction stubborn(...) ?
+// Sinon tout foutre dans une fonction et la mettre dans le while, mais beaucoup d'intialisation de SDL_Rect "inutile" --> Rechercher si cela consomme beaucoup de ressource ou non ?
 
 // RESULTAT APRES RECHERCHE
 // L'intialisation des SDL_Rect ne coûte pratiquemment rien (du fait que c'est simplement créer une structure avec 4 int à assigner).
