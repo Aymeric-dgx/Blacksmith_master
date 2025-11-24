@@ -1,12 +1,6 @@
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
-#include <stdio.h>
-#include "0_header.h"
-
-
 typedef struct joueur {
     int balance; // Solde
-    int total_salary;
+    int total_salary; // = nb_forgeron * salaire_forgeron + nb_vendeur * salaire_vendeur
     int hour;
     int day;
 } Player;
@@ -47,7 +41,7 @@ typedef struct etagere {
     int nb_of_client_boost; // ex : +25 clients/jour par étagère
 } Shelves;
 
-
+// En initialiser trois : fer, argent et or
 typedef struct matiere_premiere {
     int mine_unlocked;          // Avec l'arbre technologique
     int nb_stocked;
@@ -63,5 +57,5 @@ typedef struct objet {
     int nb_stocked;
     int time_of_production;
     int nb_blacksmith_on_it;
-    int chance_of_buying; // Va ressembler à quelque chose comme --> chance_of_buying = 1/price. Peut être ajouter un facteur multiplicateur ?
+    int chance_of_buying; // Va ressembler à quelque chose comme --> chance_of_buying = (1/price) * mutliplicateur ?
 } Item;
