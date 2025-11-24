@@ -4,19 +4,34 @@
 #include <stdio.h>
 #include "0_header.h"
 
+/*
+Créer une classe "Bouton" ou "Onglet", afin de faire en sorte que l'onglet de la page actuelle est grisée, et/ou que si on passe la 
+souris dessus, il s'assombrie légerement
+*/
+
 // Création de la page "globale" (titre, solde, temps, onglets des pages, ...)
 
-// NB pour ajouter à chacune des 5 pages l'en-tête sans trop charger le code --> Déclarer tout les rects, les foutre dans une liste et les passer en parametre à une fonction stubborn(...) ?
-// Sinon tout foutre dans une fonction et la mettre dans le while, mais beaucoup d'intialisation de SDL_Rect "inutile" --> Rechercher si cela consomme beaucoup de ressource ou non ?
 
-// RESULTAT APRES RECHERCHE
-// L'intialisation des SDL_Rect ne coûte pratiquemment rien (du fait que c'est simplement créer une structure avec 4 int à assigner).
-// Ainsi, on peut "tout" mettre dans une fonction stubborn(...) placé directemment dans le while(running)
+/*
+PB --> Comment "fusionner" l'entête et la page en cours (Forge, Magasin, ...) ?
 
-// ATTENTION
-// NB2 : par contre comment gérer les évenements, puisque l'on ne peut pas faire 2 boucle while(SDL_PollEvent(&event)) ?
-// IDEE : Récupérer seulement les rects importants et les garder dans le main (ex : les rects pour switcher entre les pages)
-// NB du IDEE : lors du dévellopemment, "marqer" les rects (ou variable) qui pourraient être interessants
+On peut créer une fonction stuborn(...) avec tout les SDL_Rect, SDL_Color, etc à l'intérieur, car l'impacte de l'initialisation "inutile" 
+en boucle de ces structs sont négliagables sur les performances (du fait que ce sont juste initialisé des ints --> très faible coûts)
+
+CEPENDANT
+
+Il est NESCESSAIRE de "sortir" la boucle de gestion d'évenements, afin de n'en avoir qu'une seule. En effet, si dans notre grand boucle
+while(running), nous avons deux boucle while(SDL_PollEvent(&event)), qu'elle soit explicitemement écrite ou "cacher" dans une fonction
+(comme PAR EXEMPLE une fonction stubborn(...)), alors il y'aura des bugs.
+Par exemple, on perçoit un clic, une fois sortie du premier while(SDL_PollEvent(...)), alors on le "supprime", et une fois dans la 2eme
+boucle while(SDL_PollEvent(...)), on ne "l'a plus", alors que on aurait voulu l'utiliser dans cette boucle par exemple.
+
+SOLUTION ?
+
+"Récupérer" les SDL_Rects, les variables, ect importants, afin de l'utiliser dans le main (ex : forge_window, shop_window, ...).
+Ensuite, on pourra "cacher" tout le reste (sans la boucle de gestion d'event donc) dans une fonction stubborn qu'on placera dans 
+le while(running) de la fonction de la window
+*/
 
 typedef struct joueur {
     int balance; // Solde
