@@ -57,7 +57,7 @@ On peut y trouver :
 
 - Les vendeurs et les étagères doivent être débolquée dans l'arbre de technologie. Sinon, la partie correspondante sera grisé.
 - Un client regarde chaque objet individuellement, il est donc dans l’intérêt du joueur d’avoir une production diversifiée pour maximiser les profits.
-- L'embauche d'un vendeur augmente la probabilité de vente de tous les objets (proportionnellement à leur probabilité de base). **ATENTION** Nombre limité de vendeurs, contrairement au forgerons
+- L'embauche d'un vendeur augmente la probabilité de vente de tous les objets (proportionnellement à leur probabilité de base).
 - Acheter de nouvelles étagères attirerera plus de clients par jour.
 
 ---
